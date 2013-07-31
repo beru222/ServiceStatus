@@ -1,0 +1,3 @@
+[submodule "lib/php-cli-framework"]
+	path = lib/php-cli-framework
+	url = git@github.com:beru222/php-cli-framework.git

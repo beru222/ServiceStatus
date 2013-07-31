@@ -1,0 +1,9 @@
+*~
+*.bak
+Thumbs.db
+desktop.ini
+.DS_Store
+.buildpath
+.project
+.settings
+lib/
