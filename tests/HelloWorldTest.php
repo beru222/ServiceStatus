@@ -16,16 +16,16 @@
 class HelloWorldTest extends PHPUnit_Framework_TestCase
 {
 
-	public function testHello()
-	{
-		$helloWorld = new HelloWorld();
-		$this->assertEquals('Hello World', $helloWorld->hello());
-	}
+  public function testHello()
+  {
+    $helloWorld = new HelloWorld();
+    $this->assertEquals('Hello World', $helloWorld->hello());
+  }
 
-	public function testHelloWorld()
-	{
-		$helloWorld = new HelloWorld('Japan');
-		$this->assertEquals('Hello Japan', $helloWorld->hello());
-	}
+ public function testHelloWorld()
+ {
+  $helloWorld = new HelloWorld('Japan');
+  $this->assertEquals('Hello Japan', $helloWorld->hello());
+ }
 
 }

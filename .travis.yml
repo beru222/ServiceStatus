@@ -12,7 +12,7 @@ php:
 
  # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-	phpenv config-add php-customize.ini
+  phpenv config-add php-customize.ini
 
 # configure notifications (email, IRC, campfire etc)
 notifications:

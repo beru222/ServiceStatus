@@ -15,28 +15,28 @@
  */
 class HelloWorld
 {
-	/**
-	 * @var world
-	 */
-	private $world;
+ /**
+  * @var world
+  */
+ private $world;
 
-	/**
-	 *
-	 * @param string $world
-	 */
-	public function __construct(string $world)
-	{
-		$this->world = $world;
-	}
+ /**
+  *
+  * @param string $world
+  */
+ public function __construct(string $world)
+ {
+  $this->world = $world;
+ }
 
-	public function hello(string $what)
-	{
-		$val = '';
-		if ($what) {
-			$val = $what;
-		} else {
-			$val = $this->world;
-		}
-		return "Hello $val";
-	}
+ public function hello(string $what)
+ {
+  $val = '';
+  if ($what) {
+   $val = $what;
+  } else {
+   $val = $this->world;
+  }
+  return "Hello $val";
+ }
 }
