@@ -7,3 +7,4 @@ desktop.ini
 .project
 .settings
 libs/
+/php-cs-fixer.phar
