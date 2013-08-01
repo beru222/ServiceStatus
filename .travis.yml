@@ -21,7 +21,7 @@ before_script:
     - phpenv config-add php-customize.ini
 
 script:
-    - phpcs --standard=PEAR --extensions=php
+    - phpcs -i
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
