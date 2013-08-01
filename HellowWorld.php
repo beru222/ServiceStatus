@@ -13,6 +13,8 @@
  * The welcome hello world.
  *
  */
+namespace ServerStatus;
+
 class HelloWorld
 {
  /**
