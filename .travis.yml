@@ -21,6 +21,7 @@ before_script:
     - phpenv config-add php-customize.ini
 
 script:
+    - phpcs --report=summary --standard=PSR1 --extensions=php ./
     - phpcs -i
 
 # configure notifications (email, IRC, campfire etc)
