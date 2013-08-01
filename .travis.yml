@@ -10,12 +10,15 @@ php:
     # aliased to a recent 5.4.x version
     - 5.4
 
-before_install:
-    - php composer.phar self-update
+# You can also define scripts to be run before and after the dependency installation script:
+#before_install:
+#    - php composer.phar self-update
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-    phpenv config-add php-customize.ini
+    - composer selfupdate
+    - composer install
+    - phpenv config-add php-customize.ini
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
