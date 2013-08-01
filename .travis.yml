@@ -3,16 +3,19 @@ language: php
 
 # list any PHP version you want to test against
 php:
-  # using major version aliases
+    # using major version aliases
 
-  # aliased to a recent 5.3.x version
-  - 5.3
-  # aliased to a recent 5.4.x version
-  - 5.4
+    # aliased to a recent 5.3.x version
+    - 5.3
+    # aliased to a recent 5.4.x version
+    - 5.4
 
- # execute any number of scripts before the test run, custom env's are available as variables
+before_install:
+    - php composer.phar self-update
+
+# execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-  phpenv config-add php-customize.ini
+    phpenv config-add php-customize.ini
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
