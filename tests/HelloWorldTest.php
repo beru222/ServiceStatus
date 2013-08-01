@@ -13,6 +13,8 @@
  * The welcome hello world.
  *
  */
+namespace ServerStatus;
+
 class HelloWorldTest extends PHPUnit_Framework_TestCase
 {
 
