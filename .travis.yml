@@ -16,8 +16,6 @@ php:
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
-    - composer selfupdate
-    - composer install
     - phpenv config-add php-customize.ini
 
 # configure notifications (email, IRC, campfire etc)
