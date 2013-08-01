@@ -16,7 +16,12 @@ php:
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
+    - pyrus install pear/PHP_CodeSniffer
+    - phpenv rehash
     - phpenv config-add php-customize.ini
+
+script:
+    - phpcs --standard=PEAR --extensions=php
 
 # configure notifications (email, IRC, campfire etc)
 notifications:

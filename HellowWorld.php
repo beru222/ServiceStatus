@@ -37,6 +37,7 @@ class HelloWorld
   } else {
    $val = $this->world;
   }
+
   return "Hello $val";
  }
 }
