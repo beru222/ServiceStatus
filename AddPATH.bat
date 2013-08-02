@@ -25,4 +25,4 @@ popd
 
 pause
 
-exit 0
+rem exit 0

@@ -15,7 +15,7 @@
  */
 namespace ServerStatus;
 
-class HelloWorld
+class HellowWorld
 {
  /**
   * @var world
