@@ -14,6 +14,7 @@
  *
  */
 namespace ServerStatus;
+use PHPUnit_Framework_TestCase;
 
 class HelloWorldTest extends PHPUnit_Framework_TestCase
 {
