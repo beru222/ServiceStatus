@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit>
-    <logging>
-        <log type="coverage-php" target="build/cov/coverage.cov"/>
-    </logging>
-</phpunit>
+<phpunit
+    bootstrap="bootstrap.php">
+    <testsuites>
+      <testsuite name="My Test Suite">
+        <directory>./</directory>
+      </testsuite>
+    </testsuites>
+      <logging>
+          <log type="coverage-php" target="build/cov/coverage.cov"/>
+      </logging>
+  </phpunit>
