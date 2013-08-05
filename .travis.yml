@@ -23,7 +23,7 @@ before_script:
 # You can specify the main build command to run instead of the default
 script:
     - mkdir -p build/logs
-    - phpunit --coverage-php build/cov/coverage-${component_name}.cov ./tests
+#    - phpunit --coverage-php build/cov/coverage-${component_name}.cov ./tests
     - php vendor/bin/phpunit -c phpunit.xml.dist
     - phpcs --standard=PSR1 --extensions=php --ignore=libs/*,/vendor/* ./
 
