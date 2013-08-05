@@ -4,7 +4,7 @@
     bootstrap="bootstrap.php">
     <testsuites>
       <testsuite>
-        <directory>./</directory>
+        <directory>.</directory>
       </testsuite>
     </testsuites>
       <logging>
