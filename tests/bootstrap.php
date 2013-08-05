@@ -18,7 +18,7 @@ function loader($class)
  $file = $class . '.php';
  require $file;
  if (file_exists($file)) {
-  require $file;
+  require '../' .$file;
  }
 }
 
