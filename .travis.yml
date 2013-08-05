@@ -10,24 +10,24 @@ php:
     - 5.4
 
 # You can also define scripts to be run before and after the dependency installation script:
-before_install:
-    - curl -s http://getcomposer.org/installer | php
-    - php composer.phar install --dev --no-interaction
-    - php composer.phar self-update
+# before_install:
 
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
+    - curl -s http://getcomposer.org/installer | php
+    - php composer.phar install --dev --no-interaction
     - pyrus install pear/PHP_CodeSniffer
     - phpenv rehash
     - phpenv config-add php-customize.ini
 
+
 script:
     - mkdir -p build/logs
-    - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
-    - phpunit tests
-    - phpcs --standard=PSR1 --extensions=php ./
+    - php vendor/bin/phpunit -c phpunit.xml.dist
+    - phpcs --standard=PSR1 --extensions=php --ignore=libs/*,/vendor/* ./
 
 after_script:
+    - php vendor/bin/coveralls
     - php vendor/bin/coveralls -v
 
 # configure notifications (email, IRC, campfire etc)
