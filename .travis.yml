@@ -12,7 +12,7 @@ php:
 # You can also define scripts to be run before and after the dependency installation script:
 # before_install:
 
-# execute any number of scripts before the test run, custom env's are available as variables
+# You can also define scripts to be run before and after the main script
 before_script:
     - curl -s http://getcomposer.org/installer | php
     - php composer.phar install --dev --no-interaction
@@ -20,15 +20,14 @@ before_script:
     - phpenv rehash
     - phpenv config-add php-customize.ini
 
-
+# You can specify the main build command to run instead of the default
 script:
     - mkdir -p build/logs
-    - php vendor/bin/phpunit -c phpunit.xml.dist
     - phpcs --standard=PSR1 --extensions=php --ignore=libs/*,/vendor/* ./
 
+# You can also define scripts to be run before and after the main script
 after_script:
-    - php vendor/bin/coveralls
-    - php vendor/bin/coveralls -v
+
 
 # configure notifications (email, IRC, campfire etc)
 notifications:
