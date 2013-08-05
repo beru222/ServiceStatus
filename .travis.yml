@@ -22,10 +22,11 @@ before_script:
 
 # You can specify the main build command to run instead of the default
 script:
-#    - mkdir -p build/logs
+    - mkdir -p build/logs
+    - phpunit --coverage-clover build/logs/clover.xml --configuration tests/phpunit.xml tests
 #    - phpunit --coverage-php build/cov/coverage-${component_name}.cov --bootstrap tests/bootstrap.php tests
 #    - php vendor/bin/phpunit -c phpunit.xml.dist
-    - phpunit --bootstrap tests/bootstrap.php tests
+#    - phpunit --bootstrap tests/bootstrap.php tests
     - phpcs --standard=PSR1 --extensions=php --ignore=libs/*,/vendor/* ./
 
 # You can also define scripts to be run before and after the main script
@@ -36,6 +37,7 @@ after_script:
 #    - php vendor/bin/phpcov.php --merge --clover build/logs/clover.xml --whitelist /path/to/src build/cov
     # in case of memory exhausting error
 #    - php -d memory_limit=-1 vendor/bin/phpcov.php
+    - php vendor/bin/coveralls -v
 
 # configure notifications (email, IRC, campfire etc)
 notifications:

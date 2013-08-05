@@ -1,10 +1,6 @@
 # .coveralls.yml example configuration
 
-# same as Ruby lib
-repo_token: Py1ilwmhwyWvHAHFT4uE8fTwL57rE4wl3
-service_name: travis-pro
-
 # for php-coveralls
-src_dir: ./
+src_dir: src
 coverage_clover: build/logs/clover.xml
 json_path: build/logs/coveralls-upload.json
